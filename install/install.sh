@@ -1,4 +1,5 @@
 #!/bin/bash
+# Scriptacular - install.sh
 # Copyright 2013 Christopher Simpkins
 # MIT License
 
