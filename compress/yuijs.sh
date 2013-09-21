@@ -4,7 +4,7 @@
 # Copyright 2013 Christopher Simpkins
 # MIT License
 
-# Modify YUI_PATH with the path to the yuicompressor jar file
+# Modify YUI_PATH below with the path to your yuicompressor jar file
 YUI_PATH="path/to/yuicompressor-2.4.8.jar"
 
 if [ $# -eq 0]; then
