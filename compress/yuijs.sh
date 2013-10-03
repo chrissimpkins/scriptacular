@@ -17,13 +17,13 @@ do
 if [ -f "$file" ]; then
 		java -jar "$YUI_PATH" -o "${file%%.*}-min.js" "$file"
 		if (( $? )); then
-			echo "$file was not able to be minified"
+			echo "$file was not able to be minified" >&2
 			exit 1
 		else
 			echo "$file was minified to ${file%%.*}-min.js"
 		fi
 	else
-		echo "Unable to find the javascript file '$file'."
+		echo "Unable to find the javascript file '$file'." >&2
 fi
 done;
 exit 0

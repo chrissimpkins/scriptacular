@@ -13,17 +13,17 @@ if [ -d ".git" ]; then
 else
 	git init
 	if (( $? )); then
-		echo "Unable to initialize your directory"
+		echo "Unable to initialize your directory" >&2
 		exit 1
 	fi
 	git add "$FILE_TYPE"
 	if (( $? )); then
-		echo "Unable to stage files"
+		echo "Unable to stage files" >&2
 		exit 1
 	fi
 	git commit -m "$INITIAL_COMMIT_MESSAGE"
 	if (( $? )); then
-		echo "Unable to create the initial commit"
+		echo "Unable to create the initial commit" >&2
 		exit 1
 	fi
 	touch README.md

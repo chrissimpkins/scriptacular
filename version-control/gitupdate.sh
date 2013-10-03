@@ -26,7 +26,7 @@ if [ -d ".git" ]; then
 	# update remote tracking branch
 	git remote update >&-
 	if (( $? )); then
-		echo $GU_ERROR_FETCH_FAIL
+		echo $GU_ERROR_FETCH_FAIL >&2
 		exit 1
 	else
 		LOCAL_SHA=$(git rev-parse --verify HEAD)
@@ -37,7 +37,7 @@ if [ -d ".git" ]; then
 		else
 			$GIT_COMMAND
 			if (( $? )); then
-				echo $GU_ERROR_UPDATE_FAIL
+				echo $GU_ERROR_UPDATE_FAIL >&2
 				exit 1
 			else
 				echo $GU_SUCCESS_REPORT
@@ -45,7 +45,7 @@ if [ -d ".git" ]; then
 		fi
 	fi
 else
-	echo $GU_ERROR_NO_GIT
+	echo $GU_ERROR_NO_GIT >&2
 	exit 1
 fi
 exit 0
