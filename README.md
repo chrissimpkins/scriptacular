@@ -4,6 +4,8 @@ scriptacular
 Generic, reusable bash shell scripts
 
 # Scripts
+`curl-compress-check.sh` : determine if web server is serving gzip/deflate compressed files [[script](https://github.com/chrissimpkins/scriptacular/blob/master/network/curl-compress-check.sh)]
+
 `gitinit.sh` : initialize git repository, stage files, & perform initial commit [[script](http://github.com/chrissimpkins/scriptacular/blob/master/version-control/gitinit.sh)]
 
 `gitupdate.sh` : perform pull and FF merge in local repository if remote is updated [[script](https://github.com/chrissimpkins/scriptacular/blob/master/version-control/gitupdate.sh)]
